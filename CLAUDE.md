@@ -1,15 +1,30 @@
-# CLAUDE.md
+# DAE
+
+A web portal where visitors try small aerospace engineering tools. Built for students and curious beginners.
 
 ## Tech Stack
-- Plain HTML, CSS, and JavaScript only.
-- No frameworks, no build step. Files open directly in a browser.
+- Language: plain HTML, CSS, and JavaScript only
+- Framework: None (no frameworks)
+- Build step: None
+- Database: None
+- Testing: None yet
+
+## Commands
+- Install: None yet (nothing to install)
+- Dev server: None yet (open `index.html` directly in a browser)
+- Build: None yet
+- Test (all): None yet
+- Test (single file): None yet
+- Lint: None yet
+- Type check: None yet
 
 ## Project Structure
 The repository is nearly empty for now. Planned layout as it grows:
-- `index.html` — main page, at the top level
-- `css/` — stylesheets
-- `js/` — scripts
-- `assets/` — images and other static files
+- `index.html` - main page, at the top level
+- `tools/` - one page per tool
+- `css/` - stylesheets
+- `js/` - scripts
+- `assets/` - images and other static files
 
 Update this section when the real structure changes.
 
@@ -19,8 +34,6 @@ Update this section when the real structure changes.
 3. Text must stay easy to read, with good contrast, in both the light and the dark theme.
 
 ## Feature Plan
-A web portal where visitors try small aerospace engineering tools. Audience: students and curious beginners.
-
 ### Portal structure
 - **Homepage** (`index.html`): short intro plus one card per tool.
 - **Opening a tool**: the visitor clicks a tool's card and lands on that tool's own page (`tools/<tool-name>.html`).
@@ -32,7 +45,25 @@ A web portal where visitors try small aerospace engineering tools. Audience: stu
 2. **Phase 2: more tools.** Add further tools one at a time. Which ones is decided with the user.
 3. **Phase 3: polish.** Improvements to the portal as a whole, decided with the user after phase 2.
 
-## Rules for Claude
-- Explain technical terms in plain language.
-- Ask before making big changes.
-- Ask rather than guess when something is unclear.
+## Code Style
+- Follow existing patterns in the surrounding code
+- Prefer small, focused functions
+- Use descriptive names; avoid abbreviations
+- No commented-out code; delete it instead
+
+## Workflow
+- Make small, focused commits with clear messages
+- Don't add new dependencies (libraries, CDN scripts, fonts) without asking
+- No tests, lint or build to run yet; check changes by opening the page in a browser
+
+## Testing
+None yet. Check manually: desktop, tablet and phone widths, and both themes.
+
+## Gotchas
+None yet.
+
+## Notes for Claude
+- Explain technical terms in plain language
+- Ask before making large refactors or architectural changes
+- If requirements are unclear, ask rather than guess
+- Keep explanations brief; show the diff or result
