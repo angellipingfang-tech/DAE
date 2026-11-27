@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Standard Atmosphere — Aerospace Tools</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/theme.js"></script>
+  <script src="../js/atmosphere.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="site-title">Aerospace Tools</h1>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">Switch to dark theme</button>
+  </header>
+
+  <main>
+    <a class="back-link" href="../index.html">&larr; Back to all tools</a>
+    <h2>Standard atmosphere</h2>
+    <p>Air gets colder, thinner and lighter the higher you go. The standard atmosphere is an agreed reference model of how this happens, used by aircraft and rocket designers. It is a typical average, not real weather.</p>
+    <p>Enter an altitude (height above sea level) to see the air around you at that height.</p>
+
+    <form id="atmosphere-form" class="tool-form" novalidate>
+      <div class="field">
+        <label for="altitude">Altitude</label>
+        <input id="altitude" name="altitude" type="number" inputmode="decimal" step="any" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="unit">Unit</label>
+        <select id="unit" name="unit">
+          <option value="meters">meters</option>
+          <option value="feet">feet</option>
+        </select>
+      </div>
+      <button class="primary-button" type="submit">Calculate</button>
+    </form>
+
+    <p id="error" class="error" role="alert"></p>
+
+    <section id="results" class="results" hidden>
+      <h3>Results</h3>
+      <dl>
+        <dt>Temperature</dt>
+        <dd><span id="out-temp-k"></span> K (<span id="out-temp-c"></span> °C)</dd>
+        <dd class="note">How hot or cold the air is. It rises and falls in layers as you climb.</dd>
+
+        <dt>Pressure</dt>
+        <dd><span id="out-pressure"></span> Pa</dd>
+        <dd class="note">How hard the air pushes on things. It drops quickly with height.</dd>
+
+        <dt>Air density</dt>
+        <dd><span id="out-density"></span> kg/m³</dd>
+        <dd class="note">How much air is packed into each cubic meter. Thinner air gives wings and engines less to work with.</dd>
+      </dl>
+    </section>
+  </main>
+</body>
+</html>

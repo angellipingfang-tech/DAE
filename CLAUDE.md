@@ -20,7 +20,8 @@ A web portal where visitors try small aerospace engineering tools. Built for stu
 
 ## Project Structure
 - `index.html` - homepage with one card per tool
-- `tools/` - one page per tool (`tool-1.html` is the placeholder)
+- `tools/` - one page per tool (`atmosphere.html` is the standard atmosphere lookup)
+- `js/atmosphere.js` - the standard atmosphere calculation and form handling
 - `css/style.css` - shared styles; theme colors are CSS variables
 - `js/theme.js` - light/dark toggle; remembers the choice in the browser
 - `assets/` - images and other static files (not created yet)
@@ -41,8 +42,8 @@ Update this section when the real structure changes.
 
 ### Phases
 1. **Phase 1: portal plus first tool.**
-   - [x] Portal: homepage, light/dark toggle, and a placeholder "Tool 1 — coming soon" card that opens `tools/tool-1.html` and returns with "Back to all tools". Simple neutral styling; the visual design is chosen later.
-   - [ ] First tool: a standard atmosphere lookup (input: altitude; output: temperature, pressure, air density). It replaces the placeholder.
+   - [x] Portal: homepage, light/dark toggle, and a tool card that opens the tool page and returns with "Back to all tools". Simple neutral styling; the visual design is chosen later.
+   - [x] First tool: a standard atmosphere lookup (input: altitude, 0 to 86 km, in meters or feet; output: temperature, pressure, air density). It replaced the placeholder, so phase 1 is done.
 2. **Phase 2: more tools.** Add further tools one at a time. Which ones is decided with the user.
 3. **Phase 3: polish.** Improvements to the portal as a whole, decided with the user after phase 2.
 
